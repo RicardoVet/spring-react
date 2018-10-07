@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,5 +38,12 @@ public class FormularioResource {
 		disciplinas.add("Geometria");
 		disciplinas.add("Optativa");
 		return ResponseEntity.ok(disciplinas);
+	}
+	
+	@GetMapping("/form/{codigo}")
+	@ResponseBody
+	public ResponseEntity<Formulario>getForm(@PathVariable String codigo){
+		Formulario form = formularioService.buscarFormulario(codigo);
+		return ResponseEntity.ok(form);
 	}
 }

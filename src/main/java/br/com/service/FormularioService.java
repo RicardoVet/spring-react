@@ -6,4 +6,6 @@ public interface FormularioService {
 
 	void salvar(Formulario formulario);
 	
+	Formulario buscarFormulario(String codigo);
+	
 }
