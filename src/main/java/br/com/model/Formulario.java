@@ -47,7 +47,7 @@ public class Formulario {
     
     private int aulasTeoricoPraticas;
     
-    private int outras;
+    private String outras;
     
     private String objetivos;
     
@@ -203,11 +203,11 @@ public class Formulario {
 		this.aulasTeoricoPraticas = aulasTeoricoPraticas;
 	}
 
-	public int getOutras() {
+	public String getOutras() {
 		return outras;
 	}
 
-	public void setOutras(int outras) {
+	public void setOutras(String outras) {
 		this.outras = outras;
 	}
 
