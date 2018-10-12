@@ -37,6 +37,7 @@ public class FormularioResource {
 		disciplinas.add("Calculo");
 		disciplinas.add("Geometria");
 		disciplinas.add("Optativa");
+		disciplinas.add("Teste");
 		return ResponseEntity.ok(disciplinas);
 	}
 	
