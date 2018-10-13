@@ -1,10 +1,10 @@
 package br.com.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Version;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,10 +13,8 @@ import lombok.Setter;
 public class Formulario {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Getter
 	private long id;
-	
-	@Version
-	private Integer versao;
 
 	@Getter
 	@Setter
@@ -28,7 +26,8 @@ public class Formulario {
 	
 	@Getter
 	@Setter
-	private String codigo;
+	@Column(unique=true)
+	private int codigo;
 	
 	@Getter
 	@Setter

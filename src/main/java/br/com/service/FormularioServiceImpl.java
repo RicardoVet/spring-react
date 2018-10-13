@@ -21,7 +21,7 @@ public class FormularioServiceImpl implements FormularioService {
 	}
 
 	@Override
-	public Formulario buscarFormulario(String codigo) {
+	public Formulario buscarFormulario(Integer codigo) {
 		return repo.findByCodigo(codigo);
 	}
 }
