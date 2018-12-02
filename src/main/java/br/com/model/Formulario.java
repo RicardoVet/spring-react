@@ -86,6 +86,10 @@ public class Formulario {
     private String outras;
     
     @Getter
+    @Setter
+    private String comentarios;
+    
+    @Getter
 	@Setter
     private String objetivos;
     
