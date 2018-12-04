@@ -13,9 +13,11 @@ public class FormularioServiceImpl implements FormularioService {
 	
 	@Override
 	public void salvar(Formulario formulario) {
-		Long id = repo.checkCodigo(formulario.getCodigo());
-		if(id!=null) {
-			formulario.setBase(id);
+		if(formulario.getId() == 0) {
+			Formulario formularioUpdate = repo.checkCodigo(formulario.getCodigo());
+			if(formularioUpdate!=null) {
+				formulario.setId(formularioUpdate.getId());
+			}
 		}
 		repo.save(formulario);
 	}
