@@ -27,8 +27,8 @@ public class Formulario {
 	
 	@Getter
 	@Setter
-	@Column(unique=true)
-	private String codigo;
+	@Column(unique=true, nullable = false)
+	private Integer codigo;
 	
 	@Getter
 	@Setter
