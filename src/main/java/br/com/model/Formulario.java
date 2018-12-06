@@ -98,8 +98,5 @@ public class Formulario {
 	@Setter
     private String conteudo;
     
-    @Getter
-	@Setter
-    private Long base;
 
 }
