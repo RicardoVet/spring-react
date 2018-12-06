@@ -42,7 +42,7 @@ public class FormularioResource {
 	
 	@GetMapping("/form/{codigo}")
 	@ResponseBody
-	public ResponseEntity<Formulario>getForm(@PathVariable Integer codigo){
+	public ResponseEntity<Formulario>getForm(@PathVariable String codigo){
 		Formulario form = formularioService.buscarFormulario(codigo);
 		return ResponseEntity.ok(form);
 	}

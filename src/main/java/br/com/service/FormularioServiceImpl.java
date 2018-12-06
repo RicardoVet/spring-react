@@ -13,15 +13,14 @@ public class FormularioServiceImpl implements FormularioService {
 	
 	@Override
 	public void salvar(Formulario formulario) {
-		Long id = repo.checkCodigo(formulario.getCodigo());
-		if(id!=null) {
-			formulario.setBase(id);
+		String id = repo.checkCodigo(formulario.getCodigo());
+		if(id==null) {
+			repo.save(formulario);
 		}
-		repo.save(formulario);
 	}
 
 	@Override
-	public Formulario buscarFormulario(Integer codigo) {
+	public Formulario buscarFormulario(String codigo) {
 		return repo.findByCodigo(codigo);
 	}
 }
