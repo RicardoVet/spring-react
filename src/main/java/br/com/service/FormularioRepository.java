@@ -7,6 +7,7 @@ import br.com.model.Formulario;
 
 public interface FormularioRepository extends JpaRepository<Formulario, Long>{
 
+
 	@Query("select f from Formulario f where f.codigo = ?1")
 	Formulario checkCodigo(Integer codigo);
 	
